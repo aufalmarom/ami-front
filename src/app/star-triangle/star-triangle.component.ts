@@ -17,7 +17,7 @@ export class StarTriangleComponent implements OnInit {
   ngOnInit() {
     this.star += "Result</br>";
     this.star += "------------</br>";
-    for (let i = 0; i < this.a; i++) {
+    for (let i = 0; i < this.a-1; i++) {
       for (let j = 0; j <= i; j++) {
         if (j >= 1 && j <= i-1) {
         	this.star += " ";
@@ -27,15 +27,17 @@ export class StarTriangleComponent implements OnInit {
       }
       this.star += "</br>";
     }
-    this.star += "------------</br>";
-    console.log(this.star);
+    for (let i = 0; i < this.a; i++) {
+      this.star += "*";
+    }
+    this.star += "</br>------------</br>";
     document.querySelector('#star').innerHTML = this.star;
   }
 
   save(){
     this.star += "Next Result</br>";
     this.star += "------------</br>";
-    for (let i = 0; i < this.a; i++) {
+    for (let i = 0; i < this.a-1; i++) {
       for (let j = 0; j <= i; j++) {
         if (j >= 1 && j <= i-1) {
         	this.star += " ";
@@ -45,7 +47,10 @@ export class StarTriangleComponent implements OnInit {
       }
       this.star += "</br>";
     }
-    this.star += "------------</br>";
+    for (let i = 0; i < this.a; i++) {
+      this.star += "*";
+    }
+    this.star += "</br>------------</br>";
     document.querySelector('#star').innerHTML = this.star;
   }
   
