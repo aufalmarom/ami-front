@@ -19,7 +19,11 @@ export class StarTriangleComponent implements OnInit {
     this.star += "------------</br>";
     for (let i = 0; i < this.a; i++) {
       for (let j = 0; j <= i; j++) {
+        if (j >= 1 && j <= i-1) {
+        	this.star += " ";
+        }else{
         	this.star += "*";
+        }
       }
       this.star += "</br>";
     }
