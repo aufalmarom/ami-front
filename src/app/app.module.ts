@@ -3,10 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { StarTriangleComponent } from './star-triangle/star-triangle.component';
+import { DynamicQuestionComponent } from './dynamic-question/dynamic-question.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    StarTriangleComponent,
+    DynamicQuestionComponent
   ],
   imports: [
     BrowserModule,
