@@ -28,7 +28,7 @@ export class StarTriangleComponent implements OnInit {
     document.querySelector('#star').innerHTML = this.star;
   }
 
-  onKeyUp(){
+  save(){
     this.star += "Next Result</br>";
     this.star += "------------</br>";
     for (let i = 0; i < this.a; i++) {

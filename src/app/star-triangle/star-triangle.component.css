@@ -1,3 +1,26 @@
+.custom-button{
+  border: none;
+  margin: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.custom-button:hover{
+  border: none;
+  background-color: #1976d2;
+  color: white;
+  margin: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 5px;
+}
+
 #star {
     white-space: pre-wrap;
 }

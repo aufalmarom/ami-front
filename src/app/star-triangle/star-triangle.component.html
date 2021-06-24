@@ -2,8 +2,9 @@
     <section>
         <h4 class="label" for="name">Masukkan jumlah baris yang Anda inginkan</h4>
         <div class="input-container">
-            <input class="input" id="name" type="number" autocomplete="off" [(ngModel)]="a" (keyup.enter)="onKeyUp()"> <br>
+            <input class="input" id="name" type="number" autocomplete="off" [(ngModel)]="a"> <br>
         </div>
+        <button class="custom-button" (click)="save()">Simpan</button>
     </section>
 </div>
 <div class="card-container">
