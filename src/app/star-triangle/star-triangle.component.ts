@@ -6,10 +6,39 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./star-triangle.component.css']
 })
 export class StarTriangleComponent implements OnInit {
+  public a: number;
+  star: string = "";
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor(
+  ) {
+    this.a = 8;
   }
 
+  ngOnInit() {
+    this.star += "Result</br>";
+    this.star += "------------</br>";
+    for (let i = 0; i < this.a; i++) {
+      for (let j = 0; j <= i; j++) {
+        	this.star += "*";
+      }
+      this.star += "</br>";
+    }
+    this.star += "------------</br>";
+    console.log(this.star);
+    document.querySelector('#star').innerHTML = this.star;
+  }
+
+  onKeyUp(){
+    this.star += "Next Result</br>";
+    this.star += "------------</br>";
+    for (let i = 0; i < this.a; i++) {
+      for (let j = 0; j <= i; j++) {
+        	this.star += "*";
+      }
+      this.star += "</br>";
+    }
+    this.star += "------------</br>";
+    document.querySelector('#star').innerHTML = this.star;
+  }
+  
 }

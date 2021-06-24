@@ -1,1 +1,12 @@
-<p>star-triangle works!</p>
+<div id="input">
+    <section>
+        <h4 class="label" for="name">Masukkan jumlah baris yang Anda inginkan</h4>
+        <div class="input-container">
+            <input class="input" id="name" type="number" autocomplete="off" [(ngModel)]="a" (keyup.enter)="onKeyUp()"> <br>
+        </div>
+    </section>
+</div>
+<div class="card-container">
+    <div id="star"></div>
+</div>
+
