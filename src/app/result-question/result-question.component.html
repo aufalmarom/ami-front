@@ -1,0 +1,29 @@
+<div class="content">
+    <mat-card class="example-card custom-card">
+        <mat-card-title class="title">
+            Result Question
+        </mat-card-title>
+        <hr class="style-two">
+        <mat-card-content>
+                <div class="example-container">
+                    <mat-form-field>
+                        <input matInput type="text" [value]="data.username"readonly>
+                    </mat-form-field><br>
+                    <mat-form-field>
+                        <input matInput type="email" [value]="data.email" readonly>
+                    </mat-form-field><br>
+                    <mat-form-field>
+                        <input matInput type="text"  [value]="data.fullname" readonly>
+                    </mat-form-field><br>
+                    <mat-form-field>
+                        <input matInput type="number" [value]="data.age" readonly>
+                    </mat-form-field><br>
+                    <label for="sex">Jenis Kelamin</label> <br>
+                    <mat-radio-group placeholder="Jenis Kelamin" readonly>
+                        <mat-radio-button class="custom-option">{{data.sex == '1' ? 'Laki-laki': 'Perempuan'}}</mat-radio-button>
+                    </mat-radio-group> <br>
+                    <button class="custom-button" mat-flat-button color="primary" type="button" (click)="onSave(data)"> Simpan</button><br>
+                </div>
+        </mat-card-content>
+    </mat-card>
+</div>

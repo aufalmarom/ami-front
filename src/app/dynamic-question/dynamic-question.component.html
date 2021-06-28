@@ -1,1 +1,36 @@
-<p>dynamic-question works! wait for it.</p>
+<div class="content">
+    <mat-card class="example-card custom-card">
+        <mat-card-title class="title">
+            Dynamic Question
+        </mat-card-title>
+        <hr class="style-two">
+        <mat-card-content>
+                <div class="example-container">
+                <form [formGroup]="form" (ngSubmit)="onSubmit(form.getRawValue())">
+                    <mat-form-field>
+                        <input matInput placeholder="Username" type="text" formControlName="username" minlength="1" maxlength="50" required>
+                        <mat-error *ngIf="form.invalid">Format tidak sesuai</mat-error>
+                    </mat-form-field><br>
+                    <mat-form-field>
+                        <input matInput placeholder="Email" type="email" formControlName="email" required>
+                        <mat-error *ngIf="form.invalid">Format tidak sesuai</mat-error>
+                    </mat-form-field><br>
+                    <mat-form-field>
+                        <input matInput placeholder="Nama" type="text" minlength="1" maxlength="50" formControlName="fullname" required>
+                        <mat-error *ngIf="form.invalid">Format tidak sesuai</mat-error>
+                    </mat-form-field><br>
+                    <mat-form-field>
+                        <input matInput placeholder="Umur" type="number" minlength="1" maxlength="200" formControlName="age" required>
+                        <mat-error *ngIf="form.invalid">Format tidak sesuai</mat-error>
+                    </mat-form-field><br>
+                    <label for="sex">Jenis Kelamin</label> <br>
+                    <mat-radio-group placeholder="Jenis Kelamin" formControlName="sex" required>
+                        <mat-radio-button class="custom-option" value="1">Laki-laki</mat-radio-button>
+                        <mat-radio-button class="custom-option" value="2">Perempuan</mat-radio-button>
+                    </mat-radio-group> <br>
+                    <button class="custom-button" [disabled]="!form.valid" mat-flat-button color="primary" type="submit"> Selanjutnya</button><br>
+                </form>
+                </div>
+        </mat-card-content>
+    </mat-card>
+</div>
